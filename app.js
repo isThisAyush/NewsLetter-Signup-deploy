@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const client = require("@mailchimp/mailchimp_marketing");
 const response = require("express");
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 client.setConfig({apiKey: "745f4d55a8594deada5f0a5054844eb4",  server: "us8",});
 
